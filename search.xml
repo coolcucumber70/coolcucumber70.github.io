@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>这次，从hexo博客做起</title>
+      <link href="/posts/19d2a4e6.html"/>
+      <url>/posts/19d2a4e6.html</url>
+      
+        <content type="html"><![CDATA[<p>今天是十月11号凌晨两点，从10月4号开始部署自己的博客，也快有一个周了吧。我才发现，我已经有好多年不熬夜了，5号那天，我熬了一宿，猛然看窗户，已经大亮我仔细的去想，上一次熬夜是什么时候呢，我想起来了，是第一次做公众号的时候吧。</p><p>我在内心确定，我是适合做技术的，我一旦钻进去一个东西，有瘾的。这种感觉，让我不会产生疲惫感。我喜欢把东西做出来那一瞬间的成就感，我知道，这是属于我的。</p><p>matery的主题模板，陆陆续续改了一些东西，添加了相册，添加了我的网易云音乐，我把哔哩哔哩的视频也都放上去了，我觉得一个博客就像是一个人的标签，一个仓库，他代表了你一路走来，所拥有的东西，所学会的东西，看到这些东西让我觉的我的生活是有意义的。</p><p>之前学过一点前端，做了这次的博客，我觉得web的网站开发，真的可以多试一试的，有意思，我打算在以后慢慢的学习web，就利用平时休息的时间，应该也会慢慢一点一点的积累吧。</p><p>今天先到这吧，实在是太困了，我的文字就像流水账，写不动，脑袋装不了太多东西了。</p><p>我在想，我把这类文章分到什么标签。啊，我的目标是，成为终生 学习者，不断向大佬们学习！！，终生学习，是我的第二个标签。</p><p>晚安，明天要更努力，你能成为你想要成为的人！</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 燕子集 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 终生学习 - web </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>人海人山</title>
       <link href="/posts/19d2a4e6.html"/>
       <url>/posts/19d2a4e6.html</url>
