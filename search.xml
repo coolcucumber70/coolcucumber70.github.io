@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>政治一轮完毕</title>
+      <link href="/posts/19d220.html"/>
+      <url>/posts/19d220.html</url>
+      
+        <content type="html"><![CDATA[<p>距离考研还有74天，用了两天的时间，终于将政治的题全部整理完毕了，感觉自己也是挺神速的。不过还是觉得一个人复习的效率不是很高。打算明天利用好番茄钟，试一下，我一天能学几个25分钟，从而建立一套真正意义上的有效率的学习方法。</p><p>今天健身房来了一个小哥，人也挺帅的，我邀请他一起练，我说平时就我一个人练，那几个妹子只打桌球，我练的都想放弃了。他看看我，说，大哥，你练的挺好，要指导我啊。我：？？哎，我这种没入门的人，在别人的眼里估计也还挺厉害的，哈哈。</p><p>今天看了看网易云音乐人收入，收入为0，哎，只有一首自由之路的播放量还可以，那首Y还被一个女生给嘲笑了。…..这种日子到底还要多久，我什么时候才能成为说唱歌手？我发四，以后所有歌都不会唱hook，唱就打死。</p><p>我觉得咸鱼的虚拟商品真的可以开发一下，在咸鱼买了一份资料，反手又挂在自己主页，两天赚了30多。很想研究研究自动发货的脚本，用咸鱼卖虚拟商品，在虚拟版权还没有完善的时候，一定是没有问题的。</p><p>早点休息，睡觉前涂点美白精华，喝杯牛奶，明天又是精致的生活，night</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 燕子集 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 考研路 </tag>
+            
+            <tag> 闲鱼 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>今天开始复习政治了</title>
       <link href="/posts/19d2a4e7.html"/>
       <url>/posts/19d2a4e7.html</url>
