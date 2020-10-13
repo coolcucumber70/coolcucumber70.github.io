@@ -5,8 +5,8 @@
     
     <entry>
       <title>今天开始复习政治了</title>
-      <link href="/posts/19d2a4e6.html"/>
-      <url>/posts/19d2a4e6.html</url>
+      <link href="/posts/19d2a4e7.html"/>
+      <url>/posts/19d2a4e7.html</url>
       
         <content type="html"><![CDATA[<p>距离考研还有75天，我拿起了政治书，是的，真的开始复习政治了。相比之前，这次的复习速度要快上很多，今天看了一整天，估计明天再看一天，应该可以把政治一轮给拿下吧。还是应该把时间留给数学跟英语，毕竟都考了那么多次了，还是一点长进没有。</p><p>今天开始，青岛出了9个无症状感染，也是挺慌了的吧，我有点担心，如果考研的时候，也是疫情爆发的期间，该怎么办呢？恍恍惚惚，才发现，已经一年了，到了该冲刺的日子了。</p><p>还是一如既往的去健身房，跟他们偶尔聊聊天，说来惭愧，目前练的满意的，也就是胸了，还记得高中特别有意思的事情，当时体检，我看一个妹子的体检单，一脸惊讶的对她说，我去，你那么瘦，为什么胸围比我大，我记得没错的话，当时数据应该是82。她满脸通红，过了好久我才反应过来。现在想来，怪有意思的，可能，对一个有好感的人的记忆，总是很难忘记，偶然想起，心中温暖的感觉，大致就是这样吧。只是如今物是人非，想来还有点惆怅，感慨青春真好。</p><p>加油吧，75天。为了梦又瘦了十斤，为了坚持这份执心，为了赢我得再使劲，为了痛不得不放下，为了变得体的代价。你不得不理解的这份沉重。记得三年前，我站在台上，说我不怕，现实多奸诈，我要带你们去见证我所书写的荣耀。我的天啊，你当时到底打了些什么仗，除了爱你的人，其他人都觉得你太可悲。上天夺走了我的翅膀，要我经历这人间的沧桑迷茫，可我本就来自天上，必然要再回到天上，而这一路，已经没人配与我共享，在孤独中保持自信，就是这种感觉吧，晚安啊！</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
@@ -20,9 +20,7 @@
       
         <tags>
             
-            <tag> 终生学习 </tag>
-            
-            <tag> Web </tag>
+            <tag> 考研路 </tag>
             
         </tags>
       
