@@ -5,12 +5,14 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="甜美食品, coolcucumber 计算机 网络安全">
+    <meta name="keywords" content="日子一天天的过, coolcucumber 计算机 网络安全">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="KeoTn_OFy4ndJwXNmm2gMeQfPhd7alqE9vQDwI32KCY">
     <meta name="google-site-verification" content="pBWoGvVEP36FzzS4xIpoMejc5UKi3RKcxd9rWWcjiDg">
     <meta name="360-site-verification" content="2db45fc772bbd3e7efd0985eec0fff97">
-    <meta name="description" content="甜美食品 | coolcocumber">
+    <meta name="description" content="日子一天天的过，学会成熟，学会去说谎话，学着不再跟人分享喜悦，学会不被道德绑架。
+这几天有点隐隐的健身坚持不住的感觉，或许是到了饮食的瓶颈期了吧，到拼多多上一会在买一些营养品补一补吧。
+想起自己新改的那个签名，一走，我不送，你来，我雨里相迎">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +21,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="baidu-site-verification" content="wvlc3L96QK">
-    <title>甜美食品 | coolcocumber</title>
+    <title>日子一天天的过 | coolcocumber</title>
     <link rel="icon" type="image/jpeg" href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/shantou/touxiang.jpg">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -685,20 +687,30 @@
 
 </header>
 
-        <link rel="stylesheet" href="/css/gallery.css">
+        
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
 
-<link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/justifiedGallery/3.7.0/css/justifiedGallery.min.css">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/%E5%8A%A8%E6%BC%AB%E6%8F%92%E7%94%BB/07.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/%E7%92%80%E7%92%A8%E6%98%9F%E7%A9%BA/16.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        甜美食品
+                        日子一天天的过
                     </div>
                 </div>
             </div>
@@ -708,202 +720,844 @@
 
 
 
-<!--   "  <p class=\"photo-name\">" + photo + "</p>\n" +
-文件名先注释掉  -->
+<main class="post-container content">
 
-<!-- 不加密写法 -->
-<!-- <div class="container">
-    <div class="photo-wrapper">
-        <div class="waterfall" id="mygallery">
-            <a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/01.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/01.jpg"
-       alt=甜美食品/01.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/02.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/02.jpg"
-       alt=甜美食品/02.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/03.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/03.jpg"
-       alt=甜美食品/03.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/04.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/04.jpg"
-       alt=甜美食品/04.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/05.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/05.jpg"
-       alt=甜美食品/05.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/06.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/06.jpg"
-       alt=甜美食品/06.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/07.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/07.jpg"
-       alt=甜美食品/07.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/08.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/08.jpg"
-       alt=甜美食品/08.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/09.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/09.jpg"
-       alt=甜美食品/09.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/10.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/10.jpg"
-       alt=甜美食品/10.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/11.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/11.jpg"
-       alt=甜美食品/11.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/12.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/12.jpg"
-       alt=甜美食品/12.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/13.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/13.jpg"
-       alt=甜美食品/13.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/14.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/14.jpg"
-       alt=甜美食品/14.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/15.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/15.jpg"
-       alt=甜美食品/15.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/16.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/16.jpg"
-       alt=甜美食品/16.jpg>
-    </a>
+    
+    <link rel="stylesheet" href="https://cdn.bootcss.com/tocbot/4.8.1/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+        width: 345px;
+        background-color: rgb(255, 255, 255,0.7);
+        border-radius: 10px;
+        box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        margin-bottom: 20px;
+    }
+    
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        
+<!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/考研路/" target="_blank">
+                                <span class="chip bg-color">考研路</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/燕子集/" class="post-category" target="_blank">
+                                燕子集
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-10-14
+                </div>
+
+                <div class="post-author info-break-policy">
+                    <i class="fa fa-user-o fa-fw"></i>作者:&nbsp;&nbsp;
+                    
+                        王凤鹏
+                    
+                </div>
+
+                
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                        530
+                    </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                        1 分
+                    </div>
+                    
+                
+                
+                
+
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>日子一天天的过，学会成熟，学会去说谎话，学着不再跟人分享喜悦，学会不被道德绑架。</p>
+<p>这几天有点隐隐的健身坚持不住的感觉，或许是到了饮食的瓶颈期了吧，到拼多多上一会在买一些营养品补一补吧。</p>
+<p>想起自己新改的那个签名，一走，我不送，你来，我雨里相迎。</p>
+<p>可能别人看来我就是个冷酷无情的人吧，我不在乎失去身边的任何人，因为我明白，他们都只陪我走一段路程的人，过段时间，他们与我，也就什么都不是了，这就是我的价值观，我也在用我的价值观去审视着身边的人，也许，人与人之间最好的关系，真的只出现在小时候吧，我给一点吃的，你就是我的朋友，在我需要帮助你挺身而出，你就是我的兄弟，现在，真的呵呵，再好的关系都会一触即破。有多少兄弟都是最后老死不相往来，呵。我真的不在看重这些东西了，你有才能，有本事，谁都来巴结你，哎，就是这么残酷，也不想再说了。</p>
+<p>决心以后戒掉哔哩哔哩，把闲暇时间移步到it之家了，刷起来也有些意思，主要不浪费时间，保证复习效率今天看了一天的数学，概率论还剩一点点。</p>
+<p>还是打算明天开始分类复习，一天看一门，感觉时间走的飞快，没有留下什么，明天，继续努力吧，早起背英语，不要在乎现实，不要在乎别人怎么看你，不要去在乎成功还是失败，记住，你就是自己的英雄，你的喜怒哀乐也是自己的，他人，休得再占取分毫。</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+            </div>
+            <hr/>
+
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+            
+            
+            <div class="reprint1">
+                <p>
+                    <span class="reprint1-tip">
+                        <i class="fa fa-exclamation-circle"></i>&nbsp;&nbsp;转载请注明:
+                    </span>
+                    <a href="https://coolcucumber70.github.io" class="b-link-green">coolcocumber</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/posts/19d2124.html" class="b-link-green">日子一天天的过</a>
+                </p>
+            </div>
+
         </div>
     </div>
-</div> -->
 
-<!-- 加密写法 -->
-<div class="container">
-    <div class="photo-wrapper">
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+    /* valine 评论框增加背景图片 */
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("http://www.luckyzmj.cn/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments .vwrap {
+        box-sizing: border-box;
+        padding: 0 0 44px;
+        background-color: #F0FFF0;
+    }
+    #vcomments .vwrap .vheader{width: 80%;bottom:0;position: absolute;background: #F0FFF0;}
+
+    #vcomments .vinput{padding:10px 15px; text-align: center;}
+
+    #vcomments .vwrap .vheader .vinput{border-bottom:0px}
+
+    #vcomments .vwrap .vedit .vctrl{margin-top:-44px;right:0;position:absolute;margin-right:-3px;}
+
+    #vcomments  .vwrap .vrow{position:absolute;right:0;bottom:0;width:20%;padding-top:0px;}
+
+    #vcomments  .vrow {font-size: 0;padding: 0px 0;}
+
+    #vcomments  .vicon {margin-right: 15px;}
+
+    #vcomments  .vrow .vcol.vcol-30{display: none}
+
+    #vcomments  .vedit .vctrl span.vpreview-btn{display: none}
+
+    #vcomments  .vrow .vcol.vcol-70{width: 100%;}
+
+    #vcomments  .vsubmit.vbtn{border-radius: 0;padding: 0;color: #fff;line-height: 44px;width:100%;border: none;background:#00ecbc;}
+
+    #vcomments  .vcards .vcard .vh .vhead .vsys{background: #F0FFF0;}
+
+    #vcomments  .vcards .vcard .vh .vmeta .vat{font-size: 12px;display: block;margin-left: 15px;float: right;color: #fff;background-color: #00ecbc;line-height: 20px;padding: 0 6px;border-radius: 3px;}
+
+    @media screen and (max-width: 520px){
+    #vcomments  .vwrap .vheader .vinput{width: 33.33%;padding:10px 5px;}  
+    }
+
+    #vcomments input[type=text],
+
+    #vcomments input[type=email],
+
+    #vcomments input[type=url],
+
+    #vcomments textarea {
+        box-sizing: border-box;
+    }
+    #vcomments .vwrap p {
+        height: 20px;
+        width: 20px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #42b983;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    /* 修复评论第一行位置错位 */
+    .v .vlist .vcard {
+    padding-top: 2.5em !important ;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div id="vcomments" class="card-content"></div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+
+<script>
+    new Valine({
+        el: '#vcomments',
+        admin_email: '16463223@qq.com',
+        appId: 'XXXXXXXXXXXXXXX',
+        appKey: 'XXXXXXXXXXXXXX',
+        path: window.location.pathname,
+        comment_count: true,
+        notify: 'false' === 'true',
+        verify: 'true' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'monsterid',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'just go go',
+
+    });
+    $(document).ready(function(){
+        $("#vcomments").on('click', 'span.vat',function(){
+            $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap"));
+            $('textarea#veditor').focus();
+        })
+    })
+</script>
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<script type="text/javascript">
+    jinrishici.load(function(result) {
+        var jrsc_plac =  result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin.dynasty + " · " + result.data.origin.author
+        document.getElementById("veditor").setAttribute("placeholder",jrsc_plac);
+    });
+</script>
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
         
-            <div class="waterfall" id="encrypt-blog">
-                <a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/01.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/01.jpg"
-       alt=甜美食品/01.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/02.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/02.jpg"
-       alt=甜美食品/02.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/03.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/03.jpg"
-       alt=甜美食品/03.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/04.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/04.jpg"
-       alt=甜美食品/04.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/05.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/05.jpg"
-       alt=甜美食品/05.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/06.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/06.jpg"
-       alt=甜美食品/06.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/07.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/07.jpg"
-       alt=甜美食品/07.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/08.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/08.jpg"
-       alt=甜美食品/08.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/09.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/09.jpg"
-       alt=甜美食品/09.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/10.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/10.jpg"
-       alt=甜美食品/10.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/11.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/11.jpg"
-       alt=甜美食品/11.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/12.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/12.jpg"
-       alt=甜美食品/12.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/13.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/13.jpg"
-       alt=甜美食品/13.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/14.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/14.jpg"
-       alt=甜美食品/14.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/15.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/15.jpg"
-       alt=甜美食品/15.jpg>
-    </a><a href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/16.jpg"
-     class="photo-item" rel="example_group"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/甜美食品/16.jpg"
-       alt=甜美食品/16.jpg>
-    </a>
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
             </div>
+            <div class="card">
+                <a href="/posts/19d2124.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/%E7%92%80%E7%92%A8%E6%98%9F%E7%A9%BA/16.jpg" class="responsive-img" alt="日子一天天的过">
+                        
+                        <span class="card-title">日子一天天的过</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            日子一天天的过，学会成熟，学会去说谎话，学着不再跟人分享喜悦，学会不被道德绑架。
+这几天有点隐隐的健身坚持不住的感觉，或许是到了饮食的瓶颈期了吧，到拼多多上一会在买一些营养品补一补吧。
+想起自己新改的那个签名，一走，我不送，你来，我雨里相迎
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-10-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/燕子集/" class="post-category" target="_blank">
+                                    燕子集
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/考研路/" target="_blank">
+                        <span class="chip bg-color">考研路</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
         
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/19d2334.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/%E5%8A%A8%E6%BC%AB%E6%8F%92%E7%94%BB/11.jpg" class="responsive-img" alt="政治一轮结束">
+                        
+                        <span class="card-title">政治一轮结束</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            距离考研还有74天，用了两天的时间，终于将政治的题全部整理完毕了，感觉自己也是挺神速的。不过还是觉得一个人复习的效率不是很高。打算明天利用好番茄钟，试一下，我一天能学几个25分钟，从而建立一套真正意义上的有效率的学习方法。
+今天健身房来了一
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-10-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/燕子集/" class="post-category" target="_blank">
+                                    燕子集
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/考研路/" target="_blank">
+                        <span class="chip bg-color">考研路</span>
+                    </a>
+                    
+                    <a href="/tags/闲鱼/" target="_blank">
+                        <span class="chip bg-color">闲鱼</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: coolcocumber<br />'
+            + '作者: 王凤鹏<br />'
+            + '链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
     </div>
 </div>
 
-<script src="/libs/lazyload/jquery.lazyload.js"></script>
-<script src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-<script src="https://cdn.staticfile.org/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js"></script>
+<!-- TOC 悬浮按钮. -->
 
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.bootcss.com/tocbot/4.8.1/tocbot.min.js"></script>
 <script>
-  // $(".waterfall").lazyload();
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h1, h2, h3, h4, h5'
+        });
 
-$("a[rel=example_group]").fancybox();
-//  不加密写法
-// $("#mygallery").justifiedGallery({margins: 5, rowHeight: 150});
-$("#encrypt-blog").justifiedGallery({margins: 5, rowHeight: 150});
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
 
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4, h5').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
 </script>
+    
+
+</main>
+
 
         <footer class="page-footer bg-color">
     <div class="container row center-align">
