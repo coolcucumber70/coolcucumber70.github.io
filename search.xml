@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>英语单词搞定大半</title>
+      <link href="/posts/19er124.html"/>
+      <url>/posts/19er124.html</url>
+      
+        <content type="html"><![CDATA[<p>10月也已经过了大半了，今天其实整体感觉也还好，就是要这样一点点的进入状态，稍等，我先去烧水泡个脚。</p><p>决定先不看哔哩哔哩了，攒好一切来冲刺考研，不能被别的事情来分心呢。这一点也挺重要的。要按照每一科来复习，否则学着学者就忘了。看看IT之家，看看漫画都行，但有一点，不刷视频。浪费时间，全心全意的来复习。</p><p>今天想起一些失去了的朋友，自己做了一段rap的词，打算把这个做成歌，叫什么呢？就叫做，我的朋友吧。嗯，也不错，希望能做出优秀的作品吧。</p><p>争分多秒的过程也得让自己平和下来，不能操之过急。明天有项目要搞，公司的活，怪烦的，不过也得做。保持效率，保持效率。从新启动之前的学习方法，应该更适合我。明天加油！@wfp</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 燕子集 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 考研路 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>日子一天天的过</title>
       <link href="/posts/19d2124.html"/>
       <url>/posts/19d2124.html</url>
