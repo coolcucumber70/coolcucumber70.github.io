@@ -5,8 +5,8 @@
     
     <entry>
       <title>慢慢在这边上传照片怎么样？</title>
-      <link href="/posts/1.9e-125.html"/>
-      <url>/posts/1.9e-125.html</url>
+      <link href="/posts/19e1re.html"/>
+      <url>/posts/19e1re.html</url>
       
         <content type="html"><![CDATA[<p>今天是周日，感觉还不错，上午把英语全部看完了，下午看了看骑行路线，如果今年考上研，打算从武汉出发，用10天的时间从武汉骑行到深圳，全长1200公里，算是我久违的毕业旅行吧。到那个时候，寒假再从深圳到海南环岛骑行，感觉还是很完美的。</p><p>我在慢慢的去寻找复习的方法，还是决定，不看哔哩哔哩了，吧唯一的娱乐方式给予给漫画和之家。</p><p>利用番茄的学习方法，努力学习25分钟，做成卡片。之后后续复习。稳扎稳打，一步一个脚印。这样效果应该会更好。</p><p>今天也想了一段比较好的flow，搭配歌词。你曾经说的那些话现在我想知道它到底有没有实现，你是只能远远的的看着她还是已经站在了她的对面。我觉得我还是比较喜欢这种比较长的段落，能让我更好的找到说唱的节奏啊</p><p>今天我把其他枯萎的花儿撇了，留下了最后一株。拍了照片。我这就试一试能不能直接通过markdown来进行上传哈。</p><p>算了，由于电脑重做系统，之前做的图床的设置也没有了。以后搞吧，11点半了，太晚了。睡觉要紧。明天整。</p><p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/shantou/%E5%98%8E%E5%98%8E.JPG" alt=""></p><p>呵，有强迫症，整不好，睡不好。怎么设置大小这些问题以后慢慢想。凌晨了，睡觉！</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
