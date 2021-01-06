@@ -4,23 +4,86 @@
   
     
     <entry>
-      <title>慢慢在这边上传照片怎么样？</title>
-      <link href="/posts/19e1re.html"/>
-      <url>/posts/19e1re.html</url>
+      <title>leetcode399除法求值</title>
+      <link href="/posts/56ddf307.html"/>
+      <url>/posts/56ddf307.html</url>
       
-        <content type="html"><![CDATA[<p>今天是周日，感觉还不错，上午把英语全部看完了，下午看了看骑行路线，如果今年考上研，打算从武汉出发，用10天的时间从武汉骑行到深圳，全长1200公里，算是我久违的毕业旅行吧。到那个时候，寒假再从深圳到海南环岛骑行，感觉还是很完美的。</p><p>我在慢慢的去寻找复习的方法，还是决定，不看哔哩哔哩了，吧唯一的娱乐方式给予给漫画和之家。</p><p>利用番茄的学习方法，努力学习25分钟，做成卡片。之后后续复习。稳扎稳打，一步一个脚印。这样效果应该会更好。</p><p>今天也想了一段比较好的flow，搭配歌词。你曾经说的那些话现在我想知道它到底有没有实现，你是只能远远的的看着她还是已经站在了她的对面。我觉得我还是比较喜欢这种比较长的段落，能让我更好的找到说唱的节奏啊</p><p>今天我把其他枯萎的花儿撇了，留下了最后一株。拍了照片。我这就试一试能不能直接通过markdown来进行上传哈。</p><p>算了，由于电脑重做系统，之前做的图床的设置也没有了。以后搞吧，11点半了，太晚了。睡觉要紧。明天整。</p><p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/shantou/%E5%98%8E%E5%98%8E.JPG" alt=""></p><p>呵，有强迫症，整不好，睡不好。怎么设置大小这些问题以后慢慢想。凌晨了，睡觉！</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<pre><code>给你一个变量对数组 equations 和一个实数值数组 values 作为已知条件，其中 equations[i] = [Ai, Bi] 和 values[i] 共同表示等式 Ai / Bi = values[i] 。每个 Ai 或 Bi 是一个表示单个变量的字符串。另有一些以数组 queries 表示的问题，其中 queries[j] = [Cj, Dj] 表示第 j 个问题，请你根据已知条件找出 Cj / Dj = ? 的结果作为答案。返回 所有问题的答案 。如果存在某个无法确定的答案，则用 -1.0 替代这个答案。注意：输入总是有效的。你可以假设除法运算中不会出现除数为 0 的情况，且不存在任何矛盾的结果。示例 1：输入：equations = [["a","b"],["b","c"]], values = [2.0,3.0], queries = [["a","c"],["b","a"],["a","e"],["a","a"],["x","x"]]输出：[6.00000,0.50000,-1.00000,1.00000,-1.00000]解释：条件：a / b = 2.0, b / c = 3.0问题：a / c = ?, b / a = ?, a / e = ?, a / a = ?, x / x = ?结果：[6.0, 0.5, -1.0, 1.0, -1.0 ]示例 2：输入：equations = [["a","b"],["b","c"],["bc","cd"]], values = [1.5,2.5,5.0], queries = [["a","c"],["c","b"],["bc","cd"],["cd","bc"]]输出：[3.75000,0.40000,5.00000,0.20000]示例 3：输入：equations = [["a","b"]], values = [0.5], queries = [["a","b"],["b","a"],["a","c"],["x","y"]]输出：[0.50000,2.00000,-1.00000,-1.00000]来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/evaluate-division著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</code></pre><p>这个题我没有做出来，看了答案，思路：</p><ol><li>利用map表将string类型与图的索引结合一起，为创建图做准备</li><li>建立图，这里建立的是vector&lt;vector&lt;pair&lt;&gt;&gt;类型的图，这里利用find和for in，打破了以前必须利用i的禁锢</li><li>利用广度遍历</li></ol><pre class="line-numbers language-c++"><code class="language-c++">#include<iostream>#include<unordered_map>#include<vector>#include<string>#include<queue>using namespace std;class Solution {public:    vector<double> calcEquation(vector<vector<string>>& equations, vector<double>& values, vector<vector<string>>& queries) {        int nvars = 0;        unordered_map<string, int> variables;        int n = equations.size();        for (int i = 0; i < n; i++) {            if (variables.find(equations[i][0]) == variables.end()) {                variables[equations[i][0]] = nvars++;            }            if (variables.find(equations[i][1]) == variables.end()) {                variables[equations[i][1]] = nvars++;            }        }//这一步的目的是把string串与图的下标对应起来        // 对于每个点，存储其直接连接到的所有点及对应的权值        vector<vector<pair<int, double>>> edges(nvars);        //两个vector创建出一个图，pair写出权值，很厉害的        for (int i = 0; i < n; i++) {            int va = variables[equations[i][0]], vb = variables[equations[i][1]];            edges[va].push_back(make_pair(vb, values[i]));            edges[vb].push_back(make_pair(va, 1.0 / values[i]));        }        vector<double> ret;        for (const auto& q : queries) {            double result = -1.0;            if (variables.find(q[0]) != variables.end() && variables.find(q[1]) != variables.end()) {                int ia = variables[q[0]], ib = variables[q[1]];//人家这个散列表用的真的狠                if (ia == ib) {                    result = 1.0;                }                else {//开始遍历图了呀，这里用广度遍历，之所以不选择prime是因为没有必要求到每一个点的                    queue<int> points;                    points.push(ia);                    vector<double> ratios(nvars, -1.0);                    ratios[ia] = 1.0;                    while (!points.empty() && ratios[ib] < 0) {                        int x = points.front();                        points.pop();                        for (const auto tmp : edges[x]) {                            if (ratios[tmp.first] < 0) {                                ratios[tmp.first] = ratios[x] * tmp.second;                                points.push(tmp.first);                            }                        }                    }                    result = ratios[ib];                }            }            ret.push_back(result);        }        return ret;    }};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
       <categories>
           
-          <category> 燕子集 </category>
+          <category> 不周山 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 考研路 </tag>
+            <tag> -leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我有个骑行的计划</title>
+      <link href="/posts/ec1b1c50.html"/>
+      <url>/posts/ec1b1c50.html</url>
+      
+        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>1月4日学习笔记</title>
+      <link href="/posts/cec82287.html"/>
+      <url>/posts/cec82287.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="1月4号，考完研后的一周"><a href="#1月4号，考完研后的一周" class="headerlink" title="1月4号，考完研后的一周"></a>1月4号，考完研后的一周</h1><p>​      考完研后，调整了一下状态，也在思考原因，休整了几天之后，决定鼓起勇气面对后面的事情，做一个好一点的计划，于是2021年1月4号开始了正式的学习了。今天看的git的应用与qt的界面开发的部分，其实我也在思考我学习过程中的缺点，我可能真的是仅仅喜欢新的东西，而不懂得及时的回顾，每当回顾的时候，我就喜欢拖延，最后的结果就是学完了也就忘了，这可能就是我的缺点吧。</p><hr><h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><p>GIT相当于一个做版本控制的软件，挺高级的。今天学习了最基础的命令。</p><ol><li>在需要管理的文件夹内打开git bash，而后初始化操作：git init </li><li>查看文件夹中的文件状态:git status ,新建立的和修改过的都是红色的，其实这里是深究了还挺复杂的，以后讨论。</li><li>添加文件到管理（把红色变成绿色）git add .</li><li>生成需要的版本：git commit -m’版本名’</li><li>查看版本记录：git log</li></ol><p>上面就是git最基本的操作了，结合实际工作考虑特殊情况。</p><p>我在之前s的版本添加代码，写成一个新的版本，但是，如果我想退回原来的版本如何做？<strong>回滚</strong></p><ul><li><p>回滚到之前的版本</p><pre class="line-numbers language-c++"><code class="language-c++">git loggit reset --hard 版本号<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li><li><p>回滚到之后的版本</p><pre><code>git refloggit reset --hard 版本号</code></pre></li></ul><p>其实git最厉害的一个东西在于分支，下面结合案例说一下分支，为什么引用分支呢？看如下场景，我在写新的模块，但是我之前的模块出了bug，想要修复，这时我如果退回去，那么我新写的就没有了。所以，bug和dev其实都是用的分支，分支完了再进行合并。至于那个合并之后把之前的删掉是怎么回事？？</p><ol><li><p>创造分支：git branch name</p></li><li><p>切换分支：git checkout name</p></li><li><p>git merge name(这里要注意一件事，所有的合并，其实本体都是master的)（合并后的内容是可以把之前的分支给删除掉的，是因为合并的版本已经有了分支的内容吧）</p></li><li><p>删除分支：git branch -d name</p><hr><h2 id="QT"><a href="#QT" class="headerlink" title="QT"></a>QT</h2><h3 id="WIDGET类"><a href="#WIDGET类" class="headerlink" title="WIDGET类"></a>WIDGET类</h3><p>之后看了qt最简单的一些东西，qt建立的基于widget类建立h和cpp，除此之外就是main函数了。main函数中两个变量，Qapplication和widget，其中前者唯一，我们的主要操作主要基于后者。基于widget的类添加各种各样的新类。关于新类是如何构造的，关于那个parent我是有点不太懂的。</p><p>widget中的几个函数resize，setwindowtitle，setfixedsize</p><p>QPushbutton按钮类setparent（this）：这一步其实就把按钮一块给放到widget上了；settext按钮的名字；move移动位置</p><h3 id="信号和槽机制"><a href="#信号和槽机制" class="headerlink" title="信号和槽机制"></a>信号和槽机制</h3><p>signal和spot，其中信号的函数只要声明就行了，它不需要做出任何动作，槽函数来负责具体动作。二者通过connect来连接。</p><p>系统的信号，感觉主要就是一些click点击之类的，比方说点击一个按钮，就关闭窗口这类connect</p><pre><code>connect（变量，信号，变量，槽函数）connect（btn,&amp;QPushButton::clicked,this,&amp;Mywidget::close）;//系统类的</code></pre><p>关于自定义的函数重载我还是不太懂。</p><p>connect函数要写在调用函数之前，调用函数中的发送信号的函数这样写： emit 自定义信号</p></li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 不周山 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>leetcode每日一题830</title>
+      <link href="/posts/a6f5b56e.html"/>
+      <url>/posts/a6f5b56e.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="leetcode每日一题830"><a href="#leetcode每日一题830" class="headerlink" title="leetcode每日一题830"></a>leetcode每日一题830</h1><pre><code>在一个由小写字母构成的字符串 s 中，包含由一些连续的相同字符所构成的分组。例如，在字符串 s = "abbxxxxzyy" 中，就含有 "a", "bb", "xxxx", "z" 和 "yy" 这样的一些分组。分组可以用区间 [start, end] 表示，其中 start 和 end 分别表示该分组的起始和终止位置的下标。上例中的 "xxxx" 分组用区间表示为 [3,6] 。我们称所有包含大于或等于三个连续字符的分组为 较大分组 。找到每一个 较大分组 的区间，按起始位置下标递增顺序排序后，返回结果。来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/positions-of-large-groups著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。、</code></pre><p>个人的解法：单纯利用两个指针，很简单的思路。</p><pre><code>#include &lt;iostream&gt;#include &lt;vector&gt;#include &lt;string&gt;using namespace std;//我拿到这个题的第一个思路就是设置出两个指针，将两个坐标的差与三来比较，进而寻找出这个字符串class Solution {public:    vector&lt;vector&lt;int&gt;&gt; largeGroupPositions(string s) {        int i = 0, j = 1;        vector&lt;vector&lt;int&gt;&gt;result;        while (j&lt; s.length())        {            vector&lt;int&gt;tmp;            if (s[i] == s[j])            {                j++;            }            else             {                if (j - i &gt; 2)                {                    tmp.push_back(i);                    tmp.push_back(j-1);                    result.push_back(tmp);                }                i = j;                j++;            }        }        if (j - i &gt; 2 &amp;&amp;s[i]==s[j-1])        {            vector&lt;int&gt;tmp;            tmp.push_back(i);            tmp.push_back(j - 1);            result.push_back(tmp);        }        return result;    }};</code></pre><p>同样的思路，别人写的代码，哎，写的也比我好太多了。</p><pre><code>通过两个指针指向窗口的首端和尾端。通过尾端的不断确定相同元素，进行窗口尾端向右移动。如果尾端元素与首端元素不同，则说明达到窗口的最大值，则查看窗口内元素是否达到3，如果达到3则记录。最后将窗口首端直接移动到与尾端相同位置(有KMP记忆的思想)。当两个指针都达到末端则结束。作者：chong-xi链接：https://leetcode-cn.com/problems/positions-of-large-groups/solution/hua-dong-chuang-kou-jie-fa-han-kmpsi-xia-qgcv/来源：力扣（LeetCode）著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。class Solution {public:    vector&lt;vector&lt;int&gt;&gt; largeGroupPositions(string s) {        int prev = 0;        int last = 0;        vector&lt;vector&lt;int&gt;&gt; res;        while (s[last]||s[prev]){           //s[end] = '\0' 为false            if (s[prev]==s[last]) last++;            else {                if ((last-prev-1)&gt;=2){                    res.push_back({prev,last-1});                }                prev = last;            }        }        return res;    }};</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 不周山 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
             
         </tags>
       
@@ -131,25 +194,23 @@
     
     
     <entry>
-      <title>这次，从hexo博客做起</title>
-      <link href="/posts/19d2a4e6.html"/>
-      <url>/posts/19d2a4e6.html</url>
+      <title>这一次，从hexo开始</title>
+      <link href="/posts/eb6ebd37.html"/>
+      <url>/posts/eb6ebd37.html</url>
       
         <content type="html"><![CDATA[<p>今天是十月11号凌晨两点，从10月4号开始部署自己的博客，也快有一个周了吧。我才发现，我已经有好多年不熬夜了，5号那天，我熬了一宿，猛然看窗户，已经大亮我仔细的去想，上一次熬夜是什么时候呢，我想起来了，是第一次做公众号的时候吧。</p><p>我在内心确定，我是适合做技术的，我一旦钻进去一个东西，有瘾的。这种感觉，让我不会产生疲惫感。我喜欢把东西做出来那一瞬间的成就感，我知道，这是属于我的。</p><p>matery的主题模板，陆陆续续改了一些东西，添加了相册，添加了我的网易云音乐，我把哔哩哔哩的视频也都放上去了，我觉得一个博客就像是一个人的标签，一个仓库，他代表了你一路走来，所拥有的东西，所学会的东西，看到这些东西让我觉的我的生活是有意义的。</p><p>之前学过一点前端，做了这次的博客，我觉得web的网站开发，真的可以多试一试的，有意思，我打算在以后慢慢的学习web，就利用平时休息的时间，应该也会慢慢一点一点的积累吧。</p><p>今天先到这吧，实在是太困了，我的文字就像流水账，写不动，脑袋装不了太多东西了。</p><p>我在想，我把这类文章分到什么标签。啊，我的目标是，成为终生 学习者，不断向大佬们学习！！，终生学习，是我的第二个标签。</p><p>晚安，明天要更努力，你能成为你想要成为的人！</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
       <categories>
           
-          <category> 燕子集 </category>
+          <category> 通天塔 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 终生学习 </tag>
-            
-            <tag> Web </tag>
+            <tag> web </tag>
             
         </tags>
       
