@@ -5,12 +5,20 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="coolcucumber 计算机 网络安全">
+    <meta name="keywords" content="qt信号和槽机制, coolcucumber 计算机 网络安全">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="KeoTn_OFy4ndJwXNmm2gMeQfPhd7alqE9vQDwI32KCY">
     <meta name="google-site-verification" content="pBWoGvVEP36FzzS4xIpoMejc5UKi3RKcxd9rWWcjiDg">
     <meta name="360-site-verification" content="2db45fc772bbd3e7efd0985eec0fff97">
-    <meta name="description" content="1月4号，考完研后的一周​      考完研后，调整了一下状态，也在思考原因，休整了几天之后，决定鼓起勇气面对后面的事情，做一个好一点的计划，于是2021年1月4号开始了正式的学习了。今天看的git的应用与qt的界面开发的部分，其实我也在思">
+    <meta name="description" content="继续前天的qt学习吧，先来看看几个文件：
+widget.h
+#ifndef WIDGET_H
+#define WIDGET_H
+
+#include 
+#include &#34;teacher.h&#34;
+#include &#34;student.h&#34;
+nam">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +27,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="baidu-site-verification" content="wvlc3L96QK">
-    <title>coolcocumber</title>
+    <title>qt信号和槽机制 | coolcocumber</title>
     <link rel="icon" type="image/jpeg" href="https://cdn.jsdelivr.net/gh/coolcucumber70/imgbed/galleries/shantou/touxiang.jpg">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -702,13 +710,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/%E5%8A%A8%E6%BC%AB%E9%A3%8E%E6%99%AF/01.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/%E5%8A%A8%E6%BC%AB%E9%A3%8E%E6%99%AF/04.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        
+                        qt信号和槽机制
                     </div>
                 </div>
             </div>
@@ -826,12 +834,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/QT/" target="_blank">
+                                <span class="chip bg-color">QT</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/不周山/" class="post-category" target="_blank">
+                                不周山
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -839,13 +860,13 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-04
+                    2021-01-06
                 </div>
 
                 <div class="post-author info-break-policy">
                     <i class="fa fa-user-o fa-fw"></i>作者:&nbsp;&nbsp;
                     
-                        王凤鹏
+                        coolcucumber
                     
                 </div>
 
@@ -853,7 +874,7 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        947
+                        831
                     </div>
                     
 
@@ -872,47 +893,258 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="1月4号，考完研后的一周"><a href="#1月4号，考完研后的一周" class="headerlink" title="1月4号，考完研后的一周"></a>1月4号，考完研后的一周</h1><p>​      考完研后，调整了一下状态，也在思考原因，休整了几天之后，决定鼓起勇气面对后面的事情，做一个好一点的计划，于是2021年1月4号开始了正式的学习了。今天看的git的应用与qt的界面开发的部分，其实我也在思考我学习过程中的缺点，我可能真的是仅仅喜欢新的东西，而不懂得及时的回顾，每当回顾的时候，我就喜欢拖延，最后的结果就是学完了也就忘了，这可能就是我的缺点吧。</p>
-<hr>
-<h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><p>GIT相当于一个做版本控制的软件，挺高级的。今天学习了最基础的命令。</p>
-<ol>
-<li>在需要管理的文件夹内打开git bash，而后初始化操作：git init </li>
-<li>查看文件夹中的文件状态:git status ,新建立的和修改过的都是红色的，其实这里是深究了还挺复杂的，以后讨论。</li>
-<li>添加文件到管理（把红色变成绿色）git add .</li>
-<li>生成需要的版本：git commit -m’版本名’</li>
-<li>查看版本记录：git log</li>
-</ol>
-<p>上面就是git最基本的操作了，结合实际工作考虑特殊情况。</p>
-<p>我在之前s的版本添加代码，写成一个新的版本，但是，如果我想退回原来的版本如何做？<strong>回滚</strong></p>
-<ul>
-<li><p>回滚到之前的版本</p>
-<pre class="line-numbers language-c++"><code class="language-c++">git log
-git reset --hard 版本号<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-</li>
-<li><p>回滚到之后的版本</p>
-<pre><code>git reflog
-git reset --hard 版本号</code></pre></li>
-</ul>
-<p>其实git最厉害的一个东西在于分支，下面结合案例说一下分支，为什么引用分支呢？看如下场景，我在写新的模块，但是我之前的模块出了bug，想要修复，这时我如果退回去，那么我新写的就没有了。所以，bug和dev其实都是用的分支，分支完了再进行合并。至于那个合并之后把之前的删掉是怎么回事？？</p>
-<ol>
-<li><p>创造分支：git branch name</p>
-</li>
-<li><p>切换分支：git checkout name</p>
-</li>
-<li><p>git merge name(这里要注意一件事，所有的合并，其实本体都是master的)（合并后的内容是可以把之前的分支给删除掉的，是因为合并的版本已经有了分支的内容吧）</p>
-</li>
-<li><p>删除分支：git branch -d name</p>
-<hr>
-<h2 id="QT"><a href="#QT" class="headerlink" title="QT"></a>QT</h2><h3 id="WIDGET类"><a href="#WIDGET类" class="headerlink" title="WIDGET类"></a>WIDGET类</h3><p>之后看了qt最简单的一些东西，qt建立的基于widget类建立h和cpp，除此之外就是main函数了。main函数中两个变量，Qapplication和widget，其中前者唯一，我们的主要操作主要基于后者。基于widget的类添加各种各样的新类。关于新类是如何构造的，关于那个parent我是有点不太懂的。</p>
-<p>widget中的几个函数resize，setwindowtitle，setfixedsize</p>
-<p>QPushbutton按钮类setparent（this）：这一步其实就把按钮一块给放到widget上了；settext按钮的名字；move移动位置</p>
-<h3 id="信号和槽机制"><a href="#信号和槽机制" class="headerlink" title="信号和槽机制"></a>信号和槽机制</h3><p>signal和spot，其中信号的函数只要声明就行了，它不需要做出任何动作，槽函数来负责具体动作。二者通过connect来连接。</p>
-<p>系统的信号，感觉主要就是一些click点击之类的，比方说点击一个按钮，就关闭窗口这类connect</p>
-<pre><code>connect（变量，信号，变量，槽函数）
-connect（btn,&amp;QPushButton::clicked,this,&amp;Mywidget::close）;//系统类的</code></pre><p>关于自定义的函数重载我还是不太懂。</p>
-<p>connect函数要写在调用函数之前，调用函数中的发送信号的函数这样写： emit 自定义信号</p>
-</li>
-</ol>
+                <p>继续前天的qt学习吧，先来看看几个文件：</p>
+<pre class="line-numbers language-c++"><code class="language-c++">widget.h
+#ifndef WIDGET_H
+#define WIDGET_H
+
+#include <QWidget>
+#include "teacher.h"
+#include "student.h"
+namespace Ui {
+class Widget;
+}
+
+class Widget : public QWidget
+{
+    Q_OBJECT
+
+public:
+    explicit Widget(QWidget *parent = 0);
+    ~Widget();
+
+private:
+    Ui::Widget *ui;
+
+    Teacher * zt;
+    Student * st;
+
+    void classIsOver();
+
+};
+
+#endif // WIDGET_H
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c++"><code class="language-c++">widget.cpp
+#include "widget.h"
+#include "ui_widget.h"
+#include <QPushButton>
+#include <QDebug>
+//Teacher 类  老师类
+//Student 类  学生类
+//下课后 ，老师会触发一个信号，饿了 ，学生响应信号，请客吃饭
+
+void func()
+{
+    qDebug() <<"aaa";
+
+}
+
+Widget::Widget(QWidget *parent) :
+    QWidget(parent),
+    ui(new Ui::Widget)
+{
+    ui->setupUi(this);
+
+    //创建一个老师对象
+    this->zt = new Teacher(this);
+
+    //创建一个学生对象
+    this->st = new Student(this);
+
+
+//    //老师饿了 学生请客的连接
+//    connect(zt,&Teacher::hungry,st,&Student::treat);
+
+//    //调用下课函数
+//    classIsOver();
+
+
+    //连接带参数的 信号和槽
+    //指针 -> 地址
+    // 函数指针 -> 函数地址
+
+    void(Teacher:: *teacherSignal)(QString  ) = &Teacher::hungry;
+    void(Student:: *studentSlot)(QString  )  = &Student::treat;
+    connect(zt,teacherSignal,st,studentSlot);
+        //从这里看的话，这是定义了一个参数为QString的函数的指针，这样的方式就区分出来了，其实这个写法我以前是没有见过的
+   // classIsOver();
+    //点击一个 下课的按钮 ，再触发下课
+    QPushButton * btn = new QPushButton("下课",this);
+    //重置窗口大小
+    this->resize(600,400);
+
+    //点击按钮 触发下课通过按钮来触发class over的函数
+    //connect(btn,&QPushButton::clicked,this,&Widget::classIsOver);
+
+
+    //无参信号和槽连接
+    void(Teacher:: *teacherSignal2)(void) = &Teacher::hungry;
+    void(Student:: *studentSlot2)(void)  = &Student::treat;
+    //connect(zt,teacherSignal2,st,studentSlot2);
+
+    //信号连接信号
+    connect(btn,&QPushButton::clicked, zt, teacherSignal2);
+
+    //断开信号
+    //disconnect(zt,teacherSignal2,st,studentSlot2);
+
+    //拓展
+    //1、信号是可以连接信号
+    //2、一个信号可以连接多个槽函数
+    //3、多个信号 可以连接 同一个槽函数
+    //4、信号和槽函数的参数 必须类型一一对应
+    //5、信号和槽的参数个数  是不是要一致？信号的参数个数 可以多余槽函数的参数个数
+
+    //Qt4版本以前的信号和槽连接方式
+    //利用Qt4信号槽 连接无参版本
+    //Qt4版本 底层SIGNAL("hungry")  SLOT( "treat")
+    connect(zt,SIGNAL(hungry()) , st , SLOT(treat()));
+    //Qt4版本优点：参数直观，缺点 ：类型不做检测
+    //Qt5以上  支持 Qt4的版本写法，反之不支持
+
+//    QPushButton * btn2 = new QPushButton;
+
+//    [btn](){
+//        btn->setText("aaaa");
+//        btn2->setText("bbb"); //btn2看不到
+//    }();
+
+
+    // mutable关键字 用于修饰值传递的变量，修改的是拷贝，而不是本体
+
+//    QPushButton * myBtn = new QPushButton (this);
+//    QPushButton * myBtn2 = new QPushButton (this);
+//    myBtn2->move(100,100);
+//    int m = 10;
+
+//    connect(myBtn,&QPushButton::clicked,this,[m] ()mutable { m = 100 + 10; qDebug() << m; });
+
+//    connect(myBtn2,&QPushButton::clicked,this,[=] ()  { qDebug() << m; });
+
+//    qDebug() << m;
+
+
+//    int ret = []()->int{return 1000;}();
+//    qDebug() << "ret = " << ret ;
+
+
+
+    //利用lambda表达式 实现点击按钮 关闭窗口
+    QPushButton * btn2 = new QPushButton ;
+    btn2->setText("关闭");
+    btn2->move(100,0);
+    btn2->setParent(this);
+        //下面的这一步lambda表达式[=]表示能够引用范围内的可见的局部变量，其中本来的槽函数是可以省略的。
+        connect(btn2,&QPushButton::clicked, [=](){//我感觉这样省了去写一个classover的这个函数，直接用这种方法来直接发送信号多好呀，哈哈哈
+//        this->close();
+//        emit zt->hungry("宫保鸡丁");
+
+        btn2->setText("aaaa");
+    });
+
+
+    //lambda表达式 最常用  [=](){}
+
+
+
+}
+
+void Widget::classIsOver()
+{
+    //下课函数，调用后 触发老师饿了的信号
+    //emit zt->hungry();
+    emit zt->hungry("宫保鸡丁");//因为classover是属于widget类中的函数，所以定义的时候是单独拿出来定义的啊，这里是满足了槽函数和信号函数的参数变量是一样的，所以才能够传递的原理啊
+}
+
+Widget::~Widget()
+{
+    delete ui;
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>看一下写的两个类函数：student和teacher：</p>
+<pre class="line-numbers language-c++"><code class="language-c++">student.h
+#ifndef STUDENT_H
+#define STUDENT_H
+
+#include <QObject>
+
+class Student : public QObject
+{
+    Q_OBJECT
+public:
+    explicit Student(QObject *parent = 0);
+
+signals:
+
+public slots:
+    //早期Qt版本 必须要写到public slots，高级版本可以写到 public或者全局下
+    //返回值 void ，需要声明，也需要实现
+    //可以有参数，可以发生重载
+    void  treat();
+
+    void  treat(QString foodName);
+
+};
+
+#endif // STUDENT_H
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c++"><code class="language-c++">student.cpp
+#include "student.h"
+#include <QDebug>
+Student::Student(QObject *parent) : QObject(parent)
+{
+
+}
+
+
+void Student::treat()
+{
+    qDebug()<< "请老师吃饭";
+}
+
+
+void Student::treat(QString foodName)
+{
+    //QString -> char * 先转成 QByteArray  ( .toUtf8() ) 再转char * ( .data() )
+    qDebug() << "请老师吃饭，老师要吃:" << foodName.toUtf8().data() ;
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c++"><code class="language-c++">teacher.h
+#ifndef TEACHER_H
+#define TEACHER_H
+
+#include <QObject>
+
+class Teacher : public QObject
+{
+    Q_OBJECT
+public:
+    explicit Teacher(QObject *parent = 0);
+
+
+signals:
+    //自定义信号  写到signals下
+    //返回值是void ，只需要声明，不需要实现
+    //可以有参数，可以重载
+    void hungry();
+
+    void hungry(QString foodName);
+
+public slots:
+
+};
+
+#endif // TEACHER_H
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>teacher.cpp
+#include "teacher.h"
+
+Teacher::Teacher(QObject *parent) : QObject(parent)
+{
+
+}
+//其实从这里就可以发现，我只需要声明一下这个函数，这个函数不需要做任何事情</code></pre><p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="E:%5Ctt%5Csource%5C_posts%5C2021-1-6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5CQt%E4%BF%A1%E5%8F%B7%E5%92%8C%E6%A7%BD%20.png" alt="Qt信号和槽 "></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -957,7 +1189,7 @@ connect（btn,&amp;QPushButton::clicked,this,&amp;Mywidget::close）;//系统类
                     </span>
                     <a href="https://coolcucumber70.github.io" class="b-link-green">coolcocumber</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/posts/0.html" class="b-link-green"></a>
+                    <a href="/posts/0.html" class="b-link-green">qt信号和槽机制</a>
                 </p>
             </div>
 
@@ -1309,34 +1541,58 @@ connect（btn,&amp;QPushButton::clicked,this,&amp;Mywidget::close）;//系统类
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/posts/0.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/%E5%8A%A8%E6%BC%AB%E9%A3%8E%E6%99%AF/01.jpg" class="responsive-img" alt="">
+                        <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/%E5%8A%A8%E6%BC%AB%E9%A3%8E%E6%99%AF/04.jpg" class="responsive-img" alt="qt信号和槽机制">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">qt信号和槽机制</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            leetcode每日一题830在一个由小写字母构成的字符串 s 中，包含由一些连续的相同字符所构成的分组。
-例如，在字符串 s = "abbxxxxzyy" 中，就含有 "a", "bb", "xxxx", "z" 和 "yy" 这样的一些
+                            继续前天的qt学习吧，先来看看几个文件：
+widget.h
+#ifndef WIDGET_H
+#define WIDGET_H
+
+#include 
+#include "teacher.h"
+#include "student.h"
+nam
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-01-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-01-06
+                            </span>
                         <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/不周山/" class="post-category" target="_blank">
+                                    不周山
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/QT/" target="_blank">
+                        <span class="chip bg-color">QT</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1348,31 +1604,31 @@ connect（btn,&amp;QPushButton::clicked,this,&amp;Mywidget::close）;//系统类
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/e3e08109.html">
+                <a href="/posts/56ddf307.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/%E7%92%80%E7%92%A8%E6%98%9F%E7%A9%BA/01.jpg" class="responsive-img" alt="一月四号，考完研后的一周">
+                        <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/%E5%8A%A8%E6%BC%AB%E9%A3%8E%E6%99%AF/02.jpg" class="responsive-img" alt="leetcode399除法求值">
                         
-                        <span class="card-title">一月四号，考完研后的一周</span>
+                        <span class="card-title">leetcode399除法求值</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一月四号，考完研后的一周
+                            给你一个变量对数组 equations 和一个实数值数组 values 作为已知条件，其中 equations[i] = [Ai, Bi] 和 values[i] 共同表示等式 Ai / Bi = values[i] 。每个 Ai 或 Bi
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-01-04
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-01-06
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/燕子集/" class="post-category" target="_blank">
-                                    燕子集
+                            <a href="/categories/不周山/" class="post-category" target="_blank">
+                                    不周山
                                 </a>
                             
                             
@@ -1382,8 +1638,8 @@ connect（btn,&amp;QPushButton::clicked,this,&amp;Mywidget::close）;//系统类
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/考研路/" target="_blank">
-                        <span class="chip bg-color">考研路</span>
+                    <a href="/tags/leetcode/" target="_blank">
+                        <span class="chip bg-color">leetcode</span>
                     </a>
                     
                 </div>
@@ -1578,7 +1834,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
             
                 &nbsp; | &nbsp;字数统计:&nbsp;
-                <span class="white-color">7.6k</span> 字
+                <span class="white-color">8k</span> 字
             
 
             
@@ -1785,8 +2041,8 @@ $(function () {
       app_id: "XXXXX"
     });
   daovoice('update');
-  </script>
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
         
 
-    <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":200},"mobile":{"show":false},"react":{"opacity":0.7}});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --><script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script></body>
+    <script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":200},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
 </html>
