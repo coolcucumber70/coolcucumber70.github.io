@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>leetcode547</title>
+      <link href="/posts/3ae86d6e.html"/>
+      <url>/posts/3ae86d6e.html</url>
+      
+        <content type="html"><![CDATA[<pre><code>有 n 个城市，其中一些彼此相连，另一些没有相连。如果城市 a 与城市 b 直接相连，且城市 b 与城市 c 直接相连，那么城市 a 与城市 c 间接相连。省份 是一组直接或间接相连的城市，组内不含其他没有相连的城市。给你一个 n x n 的矩阵 isConnected ，其中 isConnected[i][j] = 1 表示第 i 个城市和第 j 个城市直接相连，而 isConnected[i][j] = 0 表示二者不直接相连。返回矩阵中 省份 的数量来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/number-of-provinces著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</code></pre><p>这个题的思路很简单啊，就是求一个图中的联通分量的数目呀。直接用深度遍历的方法就行了呀。首先要有一个visit的数组统一设置成0，访问到了就设置成1，从任何一个点开始做深度遍历，把深度遍历放大一个更大的循环中，进而找出联通分量的数目。至于深度遍历，肯定是直接用递归来实现。访问一个点后，对其他临街的点继续执行深度遍历，直到所有都被访问为止。</p><pre class="line-numbers language-c++"><code class="language-c++">#include<iostream>#include<vector>using namespace std;class Solution {public:    void dfs(vector<vector<int>>& isConnected,vector<int>&vist,int k,int len)    {        vist[k] = 1;        for (int i = 0; i < len; i++)        {            if (isConnected[k][i] && !vist[i])            {                dfs(isConnected, vist, i,len);            }        }    }    int findCircleNum(vector<vector<int>>& isConnected) {        int len = isConnected.size();        vector<int>vist(len);        int cout = 0;        for (int i = 0; i < len; i++)        {            if (vist[i] == 0)            {                cout++;            }            dfs(isConnected,vist,i,len);        }        return cout;    }};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 不周山 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>mainwindow</title>
+      <link href="/posts/a280a607.html"/>
+      <url>/posts/a280a607.html</url>
+      
+        <content type="html"><![CDATA[<p>mainwindow来建立大致的软件模型框架</p><pre class="line-numbers language-c++"><code class="language-c++">#include "mainwindow.h"#include <QMenuBar>#include <QToolBar>#include <QDebug>#include <QPushButton>#include <QStatusBar>#include <QLabel>#include <QDockWidget>#include <QTextEdit>MainWindow::MainWindow(QWidget *parent)    : QMainWindow(parent){    //重置窗口大小    resize(600,400);    //菜单栏  只能最多有一个    //菜单栏创建    QMenuBar * bar = menuBar();    //将菜单栏放入到窗口中    setMenuBar(bar);    //创建菜单，这两个就是左上角的文件和编辑啊    QMenu * fileMenu = bar->addMenu("文件");    QMenu * editMenu = bar->addMenu("编辑");    //创建菜单项    QAction * newAction = fileMenu->addAction("新建");    //添加分割线    fileMenu->addSeparator();    QAction * openAction = fileMenu->addAction("打开");    //可以看出来，菜单栏只是两个变量而已，首先是表头QMenu，其次是他的孩子，QAction变量    QAction *rewrite=editMenu->addAction("重写");    //工具栏  可以有多个    QToolBar * toolBar = new QToolBar(this);    addToolBar(Qt::RightToolBarArea,toolBar);    //后期设置 只允许 左右停靠    toolBar->setAllowedAreas( Qt::LeftToolBarArea | Qt::RightToolBarArea );    //设置浮动    toolBar->setFloatable(false);    //设置移动 (总开关)    toolBar->setMovable(true);    //工具栏中可以设置内容    toolBar->addAction("ps");    //添加分割线    toolBar->addSeparator();    toolBar->addAction("ae");    //工具栏中添加控件,也就是增加了一个按钮选项啊，是不是开发过程中这个应该是更管用的    QPushButton * btn = new QPushButton("aa" , this);    toolBar->addWidget(btn);    //状态栏 最多有一个    QStatusBar * stBar = statusBar();//状态栏的建立方法和菜单栏是一样的哈    //设置到窗口中    setStatusBar(stBar);    //放标签控件，相比与前面的QPushbutton，这个是QLable呀    QLabel * label = new QLabel("提示信息wfp",this);    stBar->addWidget(label);    //QLabel * label2 = new QLabel("右侧提示信息",this);    //stBar->addPermanentWidget(label2);    //铆接部件 （浮动窗口） 可以有多个    QDockWidget * dockWidget = new QDockWidget("浮动",this);    addDockWidget(Qt::BottomDockWidgetArea,dockWidget);    //设置后期停靠区域，只允许上下    dockWidget->setAllowedAreas( Qt::TopDockWidgetArea | Qt::BottomDockWidgetArea );    //设置中心部件 只能一个    QTextEdit * edit = new QTextEdit(this);    setCentralWidget(edit);}MainWindow::~MainWindow(){}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 不周山 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> qt </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>qt信号和槽机制</title>
       <link href="/posts/0.html"/>
       <url>/posts/0.html</url>
@@ -20,7 +70,7 @@
       
         <tags>
             
-            <tag> QT </tag>
+            <tag> qt </tag>
             
         </tags>
       
