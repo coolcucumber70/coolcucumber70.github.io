@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://coolcucumber70.github.io/"/>
-  <updated>2021-01-07T06:06:33.884Z</updated>
+  <updated>2021-01-08T08:13:17.230Z</updated>
   <id>https://coolcucumber70.github.io/</id>
   
   <author>
@@ -17,11 +17,101 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>布局和控件</title>
+    <link href="https://coolcucumber70.github.io/posts/8319047e.html"/>
+    <id>https://coolcucumber70.github.io/posts/8319047e.html</id>
+    <published>2021-01-08T10:36:54.000Z</published>
+    <updated>2021-01-08T08:13:17.230Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre class=&quot;line-numbers language-c++&quot;&gt;&lt;code class=&quot;language-c++&quot;&gt;#include &quot;widget.h&quot;
+#include &quot;ui_widget.h&quot;
+#include
+        
+      
+    
+    </summary>
+    
+      <category term="不周山" scheme="https://coolcucumber70.github.io/categories/%E4%B8%8D%E5%91%A8%E5%B1%B1/"/>
+    
+    
+      <category term="qt" scheme="https://coolcucumber70.github.io/tags/qt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode189</title>
+    <link href="https://coolcucumber70.github.io/posts/76eca7b9.html"/>
+    <id>https://coolcucumber70.github.io/posts/76eca7b9.html</id>
+    <published>2021-01-08T02:39:30.000Z</published>
+    <updated>2021-01-08T03:02:34.486Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre&gt;&lt;code&gt;给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数。
+示例 1:
+输入: [1,2,3,4,5,6,7] 和 k = 3
+输出: [5,6,7,1,2,3,4]
+解释:
+向右旋转 1 步: [7,1,2,3,4,5,6]
+向右旋转 2
+        
+      
+    
+    </summary>
+    
+      <category term="不周山" scheme="https://coolcucumber70.github.io/categories/%E4%B8%8D%E5%91%A8%E5%B1%B1/"/>
+    
+    
+      <category term="leetcode" scheme="https://coolcucumber70.github.io/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>资源文件与对话框</title>
+    <link href="https://coolcucumber70.github.io/posts/3f7e116a.html"/>
+    <id>https://coolcucumber70.github.io/posts/3f7e116a.html</id>
+    <published>2021-01-07T07:31:39.000Z</published>
+    <updated>2021-01-08T03:02:34.487Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;首先介绍一下资源文件添加的方法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将图片文件 拷贝到项目位置下&lt;/li&gt;
+&lt;li&gt;右键项目-&amp;gt;添加新文件 –&amp;gt; Qt - &amp;gt; Qt recourse File  - &amp;gt;给资源文件起名&lt;/li&gt;
+&lt;li&gt;res 生成
+        
+      
+    
+    </summary>
+    
+      <category term="不周山" scheme="https://coolcucumber70.github.io/categories/%E4%B8%8D%E5%91%A8%E5%B1%B1/"/>
+    
+    
+      <category term="qt" scheme="https://coolcucumber70.github.io/tags/qt/"/>
+    
+  </entry>
+  
+  <entry>
     <title>leetcode547</title>
     <link href="https://coolcucumber70.github.io/posts/3ae86d6e.html"/>
     <id>https://coolcucumber70.github.io/posts/3ae86d6e.html</id>
     <published>2021-01-07T05:33:02.000Z</published>
-    <updated>2021-01-07T06:06:33.884Z</updated>
+    <updated>2021-01-07T06:06:48.172Z</updated>
     
     <summary type="html">
     

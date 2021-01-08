@@ -4,6 +4,81 @@
   
     
     <entry>
+      <title>布局和控件</title>
+      <link href="/posts/8319047e.html"/>
+      <url>/posts/8319047e.html</url>
+      
+        <content type="html"><![CDATA[<pre class="line-numbers language-c++"><code class="language-c++">#include "widget.h"#include "ui_widget.h"#include <QDebug>Widget::Widget(QWidget *parent) :    QWidget(parent),    ui(new Ui::Widget){    ui->setupUi(this);    //设置单选按钮 男默认选中    ui->rBtnMan->setChecked(true);    //选中女后 打印信息    connect(ui->rBtnWoman,&QRadioButton::clicked,[=](){        qDebug() << "选中了女了！";    });    //多选按钮  2是选中  0是未选中 1是半选    connect(ui->cBox,&QCheckBox::stateChanged,[=](int state){        qDebug() << state;    });    //利用listWidget写诗//    QListWidgetItem * item = new QListWidgetItem("锄禾日当午");//    //将一行诗放入到listWidget控件中//    ui->listWidget->addItem(item);//    item->setTextAlignment(Qt::AlignHCenter);    //QStringList   QList<QString>    QStringList list ;    list << "锄禾日当午" << "旱地和下土" << "谁知盘中餐"<< "粒粒皆辛苦";    ui->listWidget->addItems(list);}Widget::~Widget(){    delete ui;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>继续写树的类型：treeWidget：</p><pre class="line-numbers language-c++"><code class="language-c++">#include "widget.h"#include "ui_widget.h"Widget::Widget(QWidget *parent) :    QWidget(parent),    ui(new Ui::Widget){    ui->setupUi(this);    //treeWidget树控件使用    //设置水平头    ui->treeWidget->setHeaderLabels(QStringList()<< "英雄"<< "英雄介绍");    QTreeWidgetItem * liItem = new QTreeWidgetItem(QStringList()<< "力量");    QTreeWidgetItem * minItem = new QTreeWidgetItem(QStringList()<< "敏捷");    QTreeWidgetItem * zhiItem = new QTreeWidgetItem(QStringList()<< "智力");    //加载顶层的节点    ui->treeWidget->addTopLevelItem(liItem);    ui->treeWidget->addTopLevelItem(minItem);    ui->treeWidget->addTopLevelItem(zhiItem);    //追加子节点    QStringList heroL1;    heroL1 << "刚被猪" << "前排坦克，能在吸收伤害的同时造成可观的范围输出";    QTreeWidgetItem * l1 = new QTreeWidgetItem(heroL1);    liItem->addChild(l1);}Widget::~Widget(){    delete ui;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>继续写表格的布局qtablewidget：</p><pre class="line-numbers language-c++"><code class="language-c++">//TableWidget控件    //设置列数    ui->tableWidget->setColumnCount(3);    //设置水平表头    ui->tableWidget->setHorizontalHeaderLabels(QStringList()<<"姓名"<< "性别"<< "年龄");    //设置行数    ui->tableWidget->setRowCount(5);    //设置正文    //ui->tableWidget->setItem(0,0, new QTableWidgetItem("亚瑟"));    QStringList nameList;    nameList<< "亚瑟"<< "赵云"<< "张飞"<< "关羽" << "花木兰";    QList<QString> sexList;    sexList << "男"<< "男"<< "男"<< "男"<< "女";    for(int i = 0 ; i < 5 ;i ++)    {        int col = 0;        ui->tableWidget->setItem(i,col++, new QTableWidgetItem(nameList[i]));        ui->tableWidget->setItem(i,col++, new QTableWidgetItem(sexList.at(i)));        //int 转 QString        ui->tableWidget->setItem(i,col++, new QTableWidgetItem( QString::number(i+18)));    }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>下面的是一些其他的控件：</p><pre class="line-numbers language-c++"><code class="language-c++">#include "widget.h"#include "ui_widget.h"#include <QMovie>Widget::Widget(QWidget *parent) :    QWidget(parent),    ui(new Ui::Widget){    ui->setupUi(this);    //栈控件使用    //设置默认定位 scrollArea    ui->stackedWidget->setCurrentIndex(1);    //scrollArea按钮    connect(ui->btn_scrollArea,&QPushButton::clicked,[=](){        ui->stackedWidget->setCurrentIndex(1);    });    //toolBox按钮    connect(ui->btn_ToolBox,&QPushButton::clicked,[=](){        ui->stackedWidget->setCurrentIndex(2);    });    //TabWidget按钮    connect(ui->btn_TabWidget,&QPushButton::clicked,[=](){        ui->stackedWidget->setCurrentIndex(0);    });    //下拉框    ui->comboBox->addItem("奔驰");    ui->comboBox->addItem("宝马");    ui->comboBox->addItem("拖拉机");    //点击按钮 选中拖拉机选项    connect(ui->btn_select,&QPushButton::clicked,[=](){        //ui->comboBox->setCurrentIndex(2);        ui->comboBox->setCurrentText("拖拉机");    });    //利用QLabel显示图片    ui->lbl_Image->setPixmap(QPixmap(":/Image/butterfly.png"));    //利用QLabel显示 gif动态图片    QMovie * movie = new QMovie(":/Image/mario.gif");    ui->lbl_movie->setMovie(movie);    //播放动图    movie->start();}Widget::~Widget(){    delete ui;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 不周山 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> qt </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>leetcode189</title>
+      <link href="/posts/76eca7b9.html"/>
+      <url>/posts/76eca7b9.html</url>
+      
+        <content type="html"><![CDATA[<pre><code>给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数。示例 1:输入: [1,2,3,4,5,6,7] 和 k = 3输出: [5,6,7,1,2,3,4]解释:向右旋转 1 步: [7,1,2,3,4,5,6]向右旋转 2 步: [6,7,1,2,3,4,5]向右旋转 3 步: [5,6,7,1,2,3,4]示例 2:输入: [-1,-100,3,99] 和 k = 2输出: [3,99,-1,-100]解释: 向右旋转 1 步: [99,-1,-100,3]向右旋转 2 步: [3,99,-1,-100]说明:尽可能想出更多的解决方案，至少有三种不同的方法可以解决这个问题。要求使用空间复杂度为 O(1) 的 原地 算法。来源：力扣（LeetCode）</code></pre><p>个人解法：这个题很简单的，直接旋转三次，先完全旋转，然后前k个单独旋转，后面的也单独旋转:</p><pre class="line-numbers language-c++"><code class="language-c++">#include<iostream>#include<vector>using namespace std;class Solution {public:    void rot(vector<int>& nums, int i, int j)    {        while (i < j)        {            int tmp = nums[i];            nums[i] = nums[j];            nums[j] = tmp;            i++;            j--;        }    }    void rotate(vector<int>& nums, int k) {        int len = nums.size();        k = k % len;        rot(nums, 0, len - 1);        rot(nums, 0, k - 1);        rot(nums, k, len - 1);    }};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 不周山 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>资源文件与对话框</title>
+      <link href="/posts/3f7e116a.html"/>
+      <url>/posts/3f7e116a.html</url>
+      
+        <content type="html"><![CDATA[<p>首先介绍一下资源文件添加的方法：</p><ul><li>将图片文件 拷贝到项目位置下</li><li>右键项目-&gt;添加新文件 –&gt; Qt - &gt; Qt recourse File  - &gt;给资源文件起名</li><li>res 生成 res.qrc </li><li>open in editor 编辑资源</li><li>添加前缀 添加文件</li><li>使用 “ : + 前缀名 + 文件名 ”</li></ul><p>如何使用图片资源呢？举一个例子，给一个按钮来添加上图片的方法：</p><pre class="line-numbers language-c++"><code class="language-c++">ui->actiondaikai->setIcon(QIcon(":/Image/Luffy.png"));<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><hr><p>介绍一下另一个对话框类：Qdialog</p><pre class="line-numbers language-c++"><code class="language-c++">#include "mainwindow.h"#include "ui_mainwindow.h"#include <QDialog>#include <QDebug>#include <QMessageBox>#include <QColorDialog>#include <QFileDialog>#include <QFontDialog>MainWindow::MainWindow(QWidget *parent) :    QMainWindow(parent),    ui(new Ui::MainWindow){    ui->setupUi(this);    //点击新建按钮 弹出一个对话框    connect(ui->actionNew,&QAction::triggered,[=](){        //对话框 分类        //模态对话框 （不可以对其他窗口进行操作） 非模态对话框 （可以对其他窗口进行操作）        //模态创建 阻塞        //QDialog dlg(this);        //dlg.resize(200,100);        //dlg.exec();        //qDebug() << "模态对话框弹出了";        //非模态对话框         // QDialog * dlg2 = new QDialog (this);//这里放在堆中是为了防止被释放呀而一闪而过         // dlg2->resize(200,100);         // dlg2->show();         // dlg2->setAttribute(Qt::WA_DeleteOnClose); //55号 属性这个函数的作用是我直接关闭对话框我就可以把内存释放掉         // qDebug() << "非模态对话框弹出了";        //消息对话框        //错误对话框        //QMessageBox::critical(this,"critical","错误");        //信息对话框        //QMessageBox::information(this,"info","信息");        //提问对话框        //参数1  父亲  参数2  标题  参数3  提示内容  参数4 按键类型  参数5 默认关联回车按键//        if (QMessageBox::Save  ==  QMessageBox::question(this,"ques","提问",QMessageBox::Save|QMessageBox::Cancel,QMessageBox::Cancel))//        {//            qDebug() << "选择的是保存";//        }//        else//        {//            qDebug() << "选择的是取消";//        }//这是一个提问对话框，能够改变提问两边的东西        //警告对话框        //QMessageBox::warning(this,"warning","警告");        //其他标准对话框        //颜色对话框        //QColor color =  QColorDialog::getColor(QColor(255,0,0));        //qDebug() << "r = " << color.red() << " g = " << color.green() << " b  = " << color.blue() ;        //文件对话框  参数 1  父亲  参数2  标题   参数3  默认打开路径  参数4  过滤文件格式        //返回值是 选取的路径        // QString str = QFileDialog::getOpenFileName(this,"打开文件","C:\\Windows","(*.txt)");//         qDebug() << str;         //字体对话框        bool flag;        QFont font = QFontDialog::getFont(&flag,QFont("华文彩云",36));        qDebug() << "字体：" << font.family().toUtf8().data() << " 字号 "<< font.pointSize() << " 是否加粗"<< font.bold() << " 是否倾斜"<<font.italic();    });    connect(ui->actionstart,&QAction::triggered,[=](){        QMessageBox::critical(this,"critical","错误");         });}MainWindow::~MainWindow(){    delete ui;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 不周山 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> qt </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>leetcode547</title>
       <link href="/posts/3ae86d6e.html"/>
       <url>/posts/3ae86d6e.html</url>
